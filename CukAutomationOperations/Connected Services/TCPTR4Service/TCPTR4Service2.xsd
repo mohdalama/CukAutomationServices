@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:complexType name="ArrayOfBeneficiaryholdreleaserequestlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Beneficiaryholdreleaserequestlist" nillable="true" type="tns:Beneficiaryholdreleaserequestlist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiaryholdreleaserequestlist" nillable="true" type="tns:ArrayOfBeneficiaryholdreleaserequestlist" />
+  <xs:complexType name="Beneficiaryholdreleaserequestlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Beneficiaryholdreleaserequestlist" nillable="true" type="tns:Beneficiaryholdreleaserequestlist" />
+  <xs:complexType name="BeneficiaryHoldReleaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeneficiaryHoldReleaseResponseList" nillable="true" type="tns:ArrayOfBeneficiaryholdreleaseresponselist" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q1:Error" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BeneficiaryHoldReleaseResponse" nillable="true" type="tns:BeneficiaryHoldReleaseResponse" />
+  <xs:complexType name="ArrayOfBeneficiaryholdreleaseresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Beneficiaryholdreleaseresponselist" nillable="true" type="tns:Beneficiaryholdreleaseresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiaryholdreleaseresponselist" nillable="true" type="tns:ArrayOfBeneficiaryholdreleaseresponselist" />
+  <xs:complexType name="Beneficiaryholdreleaseresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Beneficiaryholdreleaseresponselist" nillable="true" type="tns:Beneficiaryholdreleaseresponselist" />
+</xs:schema>

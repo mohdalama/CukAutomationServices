@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TcptR4Services.Model" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiarySearch" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReservation" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.DemandPlanning" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ChurchPartnerReservation" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddICP" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPReleaseReservation" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.SupporterGift" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Resubmission" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseReservation" />
+  <xs:element name="beneficiarySearchByParamsDirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TcptR4Services.Model" minOccurs="0" name="beneficiarySearchchildobj" nillable="true" type="q1:BeneficiaryRequestModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="beneficiarySearchByParamsDirectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiarySearch" minOccurs="0" name="beneficiarySearchByParamsDirectResult" nillable="true" type="q2:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeneficiaryReservationsFromRN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" minOccurs="0" name="icpSearchObj" nillable="true" type="q3:ICPReservationSearchFromRNModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeneficiaryReservationsFromRNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" minOccurs="0" name="BeneficiaryReservationsFromRNResult" nillable="true" type="q4:ArrayOfICPReservationSearchFromRNResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="beneficiarySearchAndHold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TcptR4Services.Model" minOccurs="0" name="beneficiarySearchchildobj" nillable="true" type="q5:BeneficiaryRequestModel" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="childreleaseobj" nillable="true" type="q6:ArrayOfBeneficiaryholdreleaserequestlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="beneficiarySearchAndHoldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiarySearch" minOccurs="0" name="beneficiarySearchAndHoldResult" nillable="true" type="q7:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="beneficiarySearchSEF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TcptR4Services.Model" minOccurs="0" name="beneficiarySearchchildobj" nillable="true" type="q8:BeneficiaryRequestModel" />
+        <xs:element minOccurs="0" name="primaryOwner" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secondaryOwner" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="childreleaseobj" nillable="true" type="q9:ArrayOfBeneficiaryholdreleaserequestlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="beneficiarySearchSEFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiarySearch" minOccurs="0" name="beneficiarySearchSEFResult" nillable="true" type="q10:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoldBeneficiaries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="childobj" nillable="true" type="q11:ArrayOfBeneficiaryholdrequestlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoldBeneficiariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="HoldBeneficiariesResult" nillable="true" type="q12:BeneficiaryHoldResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseBeneficiariesHold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="childobj" nillable="true" type="q13:ArrayOfBeneficiaryholdreleaserequestlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseBeneficiariesHoldResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoldAndImportBeneficiaries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="childholdobj" nillable="true" type="q14:ArrayOfBeneficiaryholdrequestlist" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" minOccurs="0" name="childimportobj" nillable="true" type="q15:ArrayOfAddChildRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoldAndImportBeneficiariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="HoldAndImportBeneficiariesResult" nillable="true" type="q16:BeneficiaryHoldResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseAndImportBeneficiaries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="childreleaseobj" nillable="true" type="q17:ArrayOfBeneficiaryholdreleaserequestlist" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="childholdobj" nillable="true" type="q18:ArrayOfBeneficiaryholdrequestlist" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" minOccurs="0" name="childimportobj" nillable="true" type="q19:ArrayOfAddChildRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseAndImportBeneficiariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="ReleaseAndImportBeneficiariesResult" nillable="true" type="q20:BeneficiaryHoldResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseBeneficiaries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="childreleaseobj" nillable="true" type="q21:ArrayOfBeneficiaryholdreleaserequestlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseBeneficiariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="ReleaseBeneficiariesResult" nillable="true" type="q22:BeneficiaryHoldReleaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBenHoldSEF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="childholdobj" nillable="true" type="q23:ArrayOfBeneficiaryholdrequestlist" />
+        <xs:element minOccurs="0" name="ChildRNID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBenHoldSEFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="UpdateBenHoldSEFResult" nillable="true" type="q24:BeneficiaryHoldResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMultippleBenHold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="childholdobj" nillable="true" type="q25:ArrayOfBeneficiaryholdrequestlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMultippleBenHoldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" minOccurs="0" name="UpdateMultippleBenHoldResult" nillable="true" type="q26:BeneficiaryHoldResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createBeneficiaryReservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReservation" minOccurs="0" name="benReserveRequest" nillable="true" type="q27:ArrayOfGlobalpartnerreservationrequestlist" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" minOccurs="0" name="childreserveobj" nillable="true" type="q28:ArrayOfAddChildRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createBeneficiaryReservationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReservation" minOccurs="0" name="createBeneficiaryReservationResult" nillable="true" type="q29:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateBeneficiaryReservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReservation" minOccurs="0" name="benReserveRequest" nillable="true" type="q30:ArrayOfGlobalpartnerreservationrequestlist" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" minOccurs="0" name="childreserveobj" nillable="true" type="q31:ArrayOfAddChildRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateBeneficiaryReservationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReservation" minOccurs="0" name="updateBeneficiaryReservationResult" nillable="true" type="q32:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="demandPlanning">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="demandPlanningResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.DemandPlanning" minOccurs="0" name="demandPlanningResult" nillable="true" type="q33:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddChild">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" minOccurs="0" name="childobj" nillable="true" type="q34:ArrayOfAddChildRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddChildResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="icpSearchByParamsDirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" minOccurs="0" name="icpSearchobj" nillable="true" type="q35:IcpSearchRequestModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="icpSearchByParamsDirectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" minOccurs="0" name="icpSearchByParamsDirectResult" nillable="true" type="q36:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ICPReservationsFromRN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" minOccurs="0" name="icpSearchObj" nillable="true" type="q37:ICPReservationSearchFromRNModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ICPReservationsFromRNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" minOccurs="0" name="ICPReservationsFromRNResult" nillable="true" type="q38:ArrayOfICPReservationSearchFromRNResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="icpReservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ChurchPartnerReservation" minOccurs="0" name="icpReserveReqObj" nillable="true" type="q39:ArrayOfGlobalpartnerreservationrequestlist" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddICP" minOccurs="0" name="importIcpObj" nillable="true" type="q40:ArrayOfAddICPRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="icpReservationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ChurchPartnerReservation" minOccurs="0" name="icpReservationResult" nillable="true" type="q41:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseICPReservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPReleaseReservation" minOccurs="0" name="cancelReservationObj" nillable="true" type="q42:ArrayOfReservationCancelRequestList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseICPReservationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPReleaseReservation" minOccurs="0" name="ReleaseICPReservationResult" nillable="true" type="q43:ICPReservationReleaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specificBeneficiarySearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="searchObj" nillable="true" type="q44:SpecificBeneficiarySearchModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specificBeneficiarySearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="specificBeneficiarySearchResult" nillable="true" type="q45:ArrayOfChildDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUKHoldedChild">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" minOccurs="0" name="childobj" nillable="true" type="q46:BeneficiaryDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUKHoldedChildResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" minOccurs="0" name="GetUKHoldedChildResult" nillable="true" type="q47:ArrayOfBeneficiaryDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupporterGiftsUploader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="giftType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupporterGiftsUploaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.SupporterGift" minOccurs="0" name="SupporterGiftsUploaderResult" nillable="true" type="q48:GiftCreateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCorrespondences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCorrespondencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Resubmission" minOccurs="0" name="FetchCorrespondencesResult" nillable="true" type="q49:ArrayOfCorrespondenceModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitCorrespondeces">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Resubmission" minOccurs="0" name="data" nillable="true" type="q50:CorrespondenceModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitCorrespondecesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResubmitCorrespondecesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSupporterGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSupporterGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Resubmission" minOccurs="0" name="FetchSupporterGroupsResult" nillable="true" type="q51:ArrayOfSupporterGroupModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitSupporter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Resubmission" minOccurs="0" name="data" nillable="true" type="q52:SupporterGroupModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitSupporterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResubmitSupporterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSponsorships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSponsorshipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Resubmission" minOccurs="0" name="FetchSponsorshipsResult" nillable="true" type="q53:ArrayOfSponsorshipModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitSponsorship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Resubmission" minOccurs="0" name="data" nillable="true" type="q54:SponsorshipModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitSponsorshipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResubmitSponsorshipResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createInterventionHoldInGMC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="interventionObj" nillable="true" type="q55:Interventionholdlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createInterventionHoldInGMCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="createInterventionHoldInGMCResult" nillable="true" type="q56:InterventionHoldResponseList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchInterventions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="interventionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchInterventionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="SearchInterventionsResult" nillable="true" type="q57:InterverntionQueryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateInterventionHold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="interventionObj" nillable="true" type="q58:Interventionholdlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateInterventionHoldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="updateInterventionHoldResult" nillable="true" type="q59:InterventionHoldResponseList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelInterventionHold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="interventionObj" nillable="true" type="q60:Interventionholdcancellationlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelInterventionHoldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="cancelInterventionHoldResult" nillable="true" type="q61:InterventionHoldCancelResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createInterventionCommitment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="intCommObj" nillable="true" type="q62:Interventioncommitmentlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createInterventionCommitmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="createInterventionCommitmentResult" nillable="true" type="q63:InterventionCommitmentResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInterventionHoldsFromRN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="intObj" nillable="true" type="q64:InterventionHoldList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInterventionHoldsFromRNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="getInterventionHoldsFromRNResult" nillable="true" type="q65:ArrayOfInterventionHoldList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchInterventionHoldById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InterventionRNID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchInterventionHoldByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" minOccurs="0" name="searchInterventionHoldByIdResult" nillable="true" type="q66:InterventionHoldList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatecorrespondence">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatecorrespondenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelBeneficiaryHoldAdminFunction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="childreleaseobj" nillable="true" type="q67:ArrayOfBeneficiaryholdreleaserequestlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelBeneficiaryHoldAdminFunctionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseHold" minOccurs="0" name="CancelBeneficiaryHoldAdminFunctionResult" nillable="true" type="q68:BeneficiaryHoldReleaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testMethod">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testMethodResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateWebToken">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateWebTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updateWebTokenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupporterCountToUpdateWebToken">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupporterCountToUpdateWebTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SupporterCountToUpdateWebTokenResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBeneficiaryCountforAdhocDataRefresh">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBeneficiaryCountforAdhocDataRefreshResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getBeneficiaryCountforAdhocDataRefreshResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="initiateBeneficiaryAdHocdatarefreshProcess">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="initiateBeneficiaryAdHocdatarefreshProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="initiateBeneficiaryAdHocdatarefreshProcessResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDPCount">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDPCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDPCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doDataProtectionProcess">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doDataProtectionProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doDataProtectionProcessResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteConnectforDataProtection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteConnectforDataProtectionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSupporters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSupportersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="FetchSupportersResult" nillable="true" type="q69:ArrayOfSupporterDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitSupporters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="data1" nillable="true" type="q70:SupporterDataModel" />
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResubmitSupportersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResubmitSupportersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getdataDone">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getdataDoneResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doBstandingOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="beforedays" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="afterdays" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doBstandingOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doBstandingOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sendSingleRecordForBarclysStandingOrderProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="bbobj" nillable="true" type="q71:BarclaysStandingOrderModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sendSingleRecordForBarclysStandingOrderProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sendSingleRecordForBarclysStandingOrderProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScrutinizeGMCOperation">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScrutinizeGMCOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ScrutinizeGMCOperationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWhatEverYouWant">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWhatEverYouWantResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelBeneficiaryReservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseReservation" minOccurs="0" name="childreleaseobj" nillable="true" type="q72:ArrayOfReservationCancelRequestList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelBeneficiaryReservationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReleaseReservation" minOccurs="0" name="CancelBeneficiaryReservationResult" nillable="true" type="q73:BenReservationReleaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doBacsProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doBacsProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doBacsProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotifications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="notificationObjs" nillable="true" type="q74:NotificationsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotificationsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doDDRProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doDDRProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doDDRProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGiftaidtotalamountandrevenueperyear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BBID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGiftaidtotalamountandrevenueperyearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="getGiftaidtotalamountandrevenueperyearResult" nillable="true" type="q75:ConstituentRevenueAndGiftAidTotalAmount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getICPDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ICPDetails" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getICPDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="getICPDetailsResult" nillable="true" type="q76:ICPDetailModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCommitment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CommitmentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCommitmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteCommitmentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createIncidentForAdobeSignatureBeforeSign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="url_for_Travellers" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docket_url_for_Travellers" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="url_for_Terms_and_Conditions" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docket_url_for_Terms_and_Conditions" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createIncidentForAdobeSignatureBeforeSignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createIncidentForAdobeSignatureBeforeSignResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createIncidentForAdobeSignatureAfterSign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createIncidentForAdobeSignatureAfterSignResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doCAFProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="beforedays" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="afterdays" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doCAFProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doCAFProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doSEFProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doSEFProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doSEFProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMultipart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="file" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contentType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMultipartResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Createincidentwithattachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="crobj" nillable="true" type="q77:createIncidentModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateincidentwithattachmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specificBeneficiarySearchNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="searchObj" nillable="true" type="q78:SpecificBeneficiarySearchModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specificBeneficiarySearchNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="specificBeneficiarySearchNewResult" nillable="true" type="q79:ArrayOfChildDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doRateChangeProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doRateChangeProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doRateChangeProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConstituentDonationTableDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lookupid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConstituentDonationTableDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="getConstituentDonationTableDetailsResult" nillable="true" type="q80:ArrayOfDonationModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MajorDonorProcessInDWH">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MajorDonorProcessInDWHResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doStewardshipProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doStewardshipProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doStewardshipProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommitmentBySupporterGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="supGroupId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommitmentBySupporterGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="GetCommitmentBySupporterGroupResult" nillable="true" type="q81:ArrayOfSupporterCommitmentModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelRecurringGift">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="rgobj" nillable="true" type="q82:ArrayOfcancelRecurringGift" />
+        <xs:element minOccurs="0" name="delinkReason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelRecurringGiftResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="cancelRecurringGiftResult" nillable="true" type="q83:ArrayOfcancelRecurringGift" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForcancelRecurringGift">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="rgobj" nillable="true" type="q84:ArrayOfcancelRecurringGift" />
+        <xs:element minOccurs="0" name="delinkReason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AssignedAccount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForcancelRecurringGiftResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCancelRGIncidentWithSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="CreateRG" nillable="true" type="q85:ArrayOfRGDetails" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="CancelRG" nillable="true" type="q86:ArrayOfRGDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCancelRGIncidentWithSummaryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRGDetailsOnLookupID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lookupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SupporterGroupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRGDetailsOnLookupIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="FetchRGDetailsOnLookupIDResult" nillable="true" type="q87:ArrayOfRecurringGiftModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getdatadone">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getdatadoneResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doGDPRprocess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="base64data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ScopeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doGDPRprocessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doGDPRprocessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Supporterid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NeedKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Env" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotificationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForCoffee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="supporterData" nillable="true" type="q88:SupporterDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForCoffeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateIncidentForCoffeeResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForAmbassadors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="ambassadorsdata" nillable="true" type="q89:AmbassadorsModal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForAmbassadorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateIncidentForAmbassadorsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForSupPreferredName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="supporterData" nillable="true" type="q90:SupporterDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForSupPreferredNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateIncidentForSupPreferredNameResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSchedChildDepartures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SchedChildDeparturesID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="finalgift" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="finalletter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSchedChildDeparturesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunCheckBot">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunCheckBotResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Run8x8Process">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Run8x8ProcessResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunSafeGaurding">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunSafeGaurdingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createWelcomeCallEnquiry">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createWelcomeCallEnquiryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstagramUserFeed">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstagramUserFeedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInstagramUserFeedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRGBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Data" nillable="true" type="q91:InitialRGData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRGBatchResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOtherRGOnLookupID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lookupid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOtherRGOnLookupIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="GetOtherRGOnLookupIDResult" nillable="true" type="q92:ArrayOfRecurringGiftModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLetterNotificationMain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="env" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLetterNotificationMainResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunArrearsCancelledDDsProcess">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunArrearsCancelledDDsProcessResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitiateSetupBot">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitiateSetupBotResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRGBatch1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Data" nillable="true" type="q93:InitialRGData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRGBatch1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateRGBatch1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSponsroshipStartToday">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SponsorshipId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSponsroshipStartTodayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckSponsroshipStartTodayResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstagramData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstagramDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInstagramDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForPhotoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="supporterData" nillable="true" type="q94:SupporterDataModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForPhotoRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateIncidentForPhotoRequestResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportGenerator">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportGeneratorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReportGeneratorResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForCompassionTogether">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="compassiontogether" nillable="true" type="q95:CompassionTogether" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIncidentForCompassionTogetherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateIncidentForCompassionTogetherResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunPaymentMethodNoneProcess">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunPaymentMethodNoneProcessResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoDebugWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoDebugWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGiftNotification">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGiftNotificationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLetterUpdateNotification">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLetterUpdateNotificationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IcpInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="icpid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IcpInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IcpInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

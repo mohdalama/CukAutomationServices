@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiarySearch" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiarySearch" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeneficiarySearchResponseList" nillable="true" type="tns:ArrayOfBeneficiarysearchresponselist" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q1:Error" />
+      <xs:element minOccurs="0" name="NumberOfBeneficiaries" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="ArrayOfBeneficiarysearchresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Beneficiarysearchresponselist" nillable="true" type="tns:Beneficiarysearchresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiarysearchresponselist" nillable="true" type="tns:ArrayOfBeneficiarysearchresponselist" />
+  <xs:complexType name="Beneficiarysearchresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BeneficiaryState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_LocalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_ThumbnailURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorrespondentScore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldOffice_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullBodyImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldingGlobalPartnerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsInHIVAffectedArea" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOrphan" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSpecialNeeds" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongWaiting" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinDaysWaiting" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreferredName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriorityScore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WaitingSinceDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Beneficiarysearchresponselist" nillable="true" type="tns:Beneficiarysearchresponselist" />
+</xs:schema>

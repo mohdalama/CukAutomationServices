@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.AddChild" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAddChildRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddChildRequest" nillable="true" type="tns:AddChildRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddChildRequest" nillable="true" type="tns:ArrayOfAddChildRequest" />
+  <xs:complexType name="AddChildRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" type="xs:int" />
+      <xs:element minOccurs="0" name="Fo_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsInHIVAffectedArea" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSpecialNeeds" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Local_Beneficiary_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriorityScore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WaitingSinceDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="birthDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fullbodyimageUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="globalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="holdId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="icpId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isImportToBB" type="xs:int" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="localId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="needStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="orphan" type="xs:boolean" />
+      <xs:element minOccurs="0" name="preferredName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddChildRequest" nillable="true" type="tns:AddChildRequest" />
+  <xs:complexType name="BeneficiaryDataModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldDateExpiry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IcpName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NeedId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryConatct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriorityScore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryConatct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BeneficiaryDataModel" nillable="true" type="tns:BeneficiaryDataModel" />
+  <xs:complexType name="ArrayOfBeneficiaryDataModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BeneficiaryDataModel" nillable="true" type="tns:BeneficiaryDataModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiaryDataModel" nillable="true" type="tns:ArrayOfBeneficiaryDataModel" />
+</xs:schema>

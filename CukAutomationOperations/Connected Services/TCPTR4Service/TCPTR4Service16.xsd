@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReservation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryReservation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:complexType name="ArrayOfGlobalpartnerreservationrequestlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Globalpartnerreservationrequestlist" nillable="true" type="tns:Globalpartnerreservationrequestlist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlobalpartnerreservationrequestlist" nillable="true" type="tns:ArrayOfGlobalpartnerreservationrequestlist" />
+  <xs:complexType name="Globalpartnerreservationrequestlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CampaignEventIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Channel_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldYieldRate" type="xs:int" />
+      <xs:element minOccurs="0" name="ICP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsReservationAutoApproved" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfBeneficiaries" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reservation_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Globalpartnerreservationrequestlist" nillable="true" type="tns:Globalpartnerreservationrequestlist" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q1:Error" />
+      <xs:element minOccurs="0" name="GlobalPartnerReservationResponseList" nillable="true" type="tns:ArrayOfGlobalpartnerreservationresponselist" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="ArrayOfGlobalpartnerreservationresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Globalpartnerreservationresponselist" nillable="true" type="tns:Globalpartnerreservationresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlobalpartnerreservationresponselist" nillable="true" type="tns:ArrayOfGlobalpartnerreservationresponselist" />
+  <xs:complexType name="Globalpartnerreservationresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="ICP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reservation_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Globalpartnerreservationresponselist" nillable="true" type="tns:Globalpartnerreservationresponselist" />
+</xs:schema>
