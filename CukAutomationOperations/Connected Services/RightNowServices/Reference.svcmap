@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3d44f41b-260c-4278-baa7-39a9a6fb2c15" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="soap.xsd" MetadataType="Schema" ID="535b1134-c6a6-4e43-bd64-ba7de4d7c710" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?xsd=metadata" />
+    <MetadataFile FileName="RightNow.wsdl" MetadataType="Wsdl" ID="35040d05-e2ae-4e84-a72b-9b8a7ba27156" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?wsdl" />
+    <MetadataFile FileName="soap1.xsd" MetadataType="Schema" ID="99ec3321-23ba-4b4d-b906-23fec774c2b3" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?xsd=nullfields" />
+    <MetadataFile FileName="soap2.xsd" MetadataType="Schema" ID="74d397ed-94fb-46ed-920d-cd8ecdbcb0ff" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?xsd=base" />
+    <MetadataFile FileName="soap3.xsd" MetadataType="Schema" ID="37c17af9-95bf-4f3f-baf7-444ac80bab27" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?xsd=objects" />
+    <MetadataFile FileName="soap4.xsd" MetadataType="Schema" ID="4baf7ffc-ccfd-43b4-ae89-289b0133a3fd" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?xsd=faults" />
+    <MetadataFile FileName="soap5.xsd" MetadataType="Schema" ID="cafe79d0-8916-47d1-b03f-78f97c4b750c" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?xsd=messagestyped" />
+    <MetadataFile FileName="soap6.xsd" MetadataType="Schema" ID="82c0939a-0e12-4acf-844a-e8508d3f5998" SourceId="1" SourceUrl="https://compassionuk--tst1.custhelp.com/services/soap/connect/soap?xsd=generic" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

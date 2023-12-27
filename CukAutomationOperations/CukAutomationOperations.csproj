@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02C2D176-D9DF-4BE9-9401-AD4F922FCC7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CukAutomationOperations</RootNamespace>
+    <AssemblyName>CukAutomationOperations</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Blackbaud.API.Client, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.API.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx, Version=4.0.3000.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Blackbaud.AppFx.Constituent.Catalog.V1_1.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.Constituent.Catalog.V1_1.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Constituent.Catalog.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.Constituent.Catalog.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Fundraising.Catalog.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.Fundraising.Catalog.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Fuzzy, Version=4.0.3000.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\DLLReferences\Blackbaud.AppFx.Fuzzy.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.GiftAid.Catalog.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.GiftAid.Catalog.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Membership.Catalog.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\DLLReferences\Blackbaud.AppFx.Membership.Catalog.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Platform.Catalog.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.Platform.Catalog.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Security.Catalog, Version=4.0.3000.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.Security.Catalog.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Security.Catalog.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.Security.Catalog.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Sponsorship.Catalog.WebApiClient, Version=4.0.184.3003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.Sponsorship.Catalog.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.WebAPI, Version=4.0.3000.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NServiceBusFramework\BBSubscriberEndpoints\bin\Debug\Blackbaud.AppFx.WebAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.WebAPI.XmlSerializers, Version=4.0.3000.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NServiceBusFramework\BBSubscriberEndpoints\bin\Debug\Blackbaud.AppFx.WebAPI.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.XmlTypes, Version=4.0.3000.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BB Infinity\SDK\DLLReferences\Blackbaud.AppFx.XmlTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=27.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.27.2.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.23\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.8.1.0\lib\net472\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.Core.8.1.0\lib\net472\Polly.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2020.0.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SharedConfiguration">
+      <HintPath>..\..\SharedConfiguration\SharedConfiguration\bin\Debug\SharedConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.23\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.23\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\BBFetchServices\BBTargetRepository\Constant.cs">
+      <Link>Constant.cs</Link>
+    </Compile>
+    <Compile Include="Connected Services\MainWebService7\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MainWebService8\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MiscServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RightNowServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TCPTR4Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CukAutomationOperation.cs" />
+    <Compile Include="Model\AdvanceNotice.cs" />
+    <Compile Include="Model\AutomationBot\CheckBot.cs" />
+    <Compile Include="Model\AutomationBot\Constant.cs" />
+    <Compile Include="Model\AutomationBot\SEFModel.cs" />
+    <Compile Include="Model\BlackbaudConstants.cs" />
+    <Compile Include="Model\cancelRecurringGift.cs" />
+    <Compile Include="Model\ChildDataModel.cs" />
+    <Compile Include="Model\CIFModel.cs" />
+    <Compile Include="Model\Constant.cs" />
+    <Compile Include="Model\ConstituentPaymentDetails.cs" />
+    <Compile Include="Model\Departure.cs" />
+    <Compile Include="Model\ExportModel.cs" />
+    <Compile Include="Model\GiftAidThreadModel.cs" />
+    <Compile Include="Model\NonSponsorDonationsModel.cs" />
+    <Compile Include="Model\NotificationModel.cs" />
+    <Compile Include="Model\OnlyConstituentDetails.cs" />
+    <Compile Include="Model\ProcessScheduleManager.cs" />
+    <Compile Include="Model\ResolveBot.cs" />
+    <Compile Include="Model\Response.cs" />
+    <Compile Include="Model\RevenuePayment.cs" />
+    <Compile Include="Model\Rootobject.cs" />
+    <Compile Include="Model\S2BCommDraftData.cs" />
+    <Compile Include="Model\SearchSupporterModel.cs" />
+    <Compile Include="Model\SupporterDataModel.cs" />
+    <Compile Include="Model\TokenResponseContent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\MainWebService7\MainServices.wsdl" />
+    <None Include="Connected Services\MainWebService7\MainServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MainWebService7\MainServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MainWebService8\MainServices.wsdl" />
+    <None Include="Connected Services\MainWebService8\MainServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MainWebService8\MainServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MiscServices\CukAutomationOperations.MiscServices.ValidateUKBankAccountResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MiscServices\Services.wsdl" />
+    <None Include="Connected Services\MiscServices\Services.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MiscServices\Services1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MiscServices\Services2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.APIAccessResponseHeaderType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.BatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.BatchResponseItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.BulkTransferSubObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.ConvertGenericToObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.ConvertObjectToGenericResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.CSVTableSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.DestroyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.ExecuteMarketingFlowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetFileDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetMetaDataForClassResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetMetaDataForOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetMetaDataLastChangeTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetMetaDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetPrimaryClassNamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetSubscribableObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetValuesForNamedIDHierarchyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.GetValuesForNamedIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.Incident.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.MetaDataClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.MetaDataClassOperation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.NamedID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.NamedIDWithParent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.QueryCSVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.QueryObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.QueryResultData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.ResetContactPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.RNObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.RNObjectType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.RunAnalyticsReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.SendIncidentResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.SendMailingToContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.SubscribableObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.TransferSubObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\CukAutomationOperations.RightNowServices.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RightNowServices\RightNow.wsdl" />
+    <None Include="Connected Services\RightNowServices\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RightNowServices\soap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RightNowServices\soap2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RightNowServices\soap3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RightNowServices\soap4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RightNowServices\soap5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RightNowServices\soap6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.BeneficiaryDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.BeneficiaryHoldReleaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.BeneficiaryHoldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.BenReservationReleaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.cancelRecurringGift.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.ChildDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.ConstituentRevenueAndGiftAidTotalAmount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.CorrespondenceModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.DonationModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.getdatadoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.GiftCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.ICPDetailModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.ICPReservationReleaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.ICPReservationSearchFromRNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.InterventionCommitmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.InterventionHoldCancelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.InterventionHoldList1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.InterventionHoldResponseList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.InterverntionQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.RecurringGiftModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.Response2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.Response3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.Response4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.SponsorshipModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.SupporterCommitmentModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.SupporterDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\CukAutomationOperations.TCPTR4Service.SupporterGroupModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service.wsdl" />
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TCPTR4Service\TCPTR4Service9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MainWebService7\" />
+    <WCFMetadataStorage Include="Connected Services\MainWebService8\" />
+    <WCFMetadataStorage Include="Connected Services\MiscServices\" />
+    <WCFMetadataStorage Include="Connected Services\RightNowServices\" />
+    <WCFMetadataStorage Include="Connected Services\TCPTR4Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RightNowServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RightNowServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RightNowServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService7\MainServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService7\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService7\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService7\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MiscServices\Services.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MiscServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MiscServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MiscServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TCPTR4Service\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TCPTR4Service\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TCPTR4Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService8\MainServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService8\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService8\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MainWebService8\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.DemandPlanning" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.DemandPlanning" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q1:Error" />
+      <xs:element minOccurs="0" name="ErrorOutput" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalPartnerWeeklyDemandResponseDetails" nillable="true" type="tns:ArrayOfGlobalpartnerweeklydemandresponsedetail" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="ArrayOfGlobalpartnerweeklydemandresponsedetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Globalpartnerweeklydemandresponsedetail" nillable="true" type="tns:Globalpartnerweeklydemandresponsedetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlobalpartnerweeklydemandresponsedetail" nillable="true" type="tns:ArrayOfGlobalpartnerweeklydemandresponsedetail" />
+  <xs:complexType name="Globalpartnerweeklydemandresponsedetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Globalpartnerweeklydemandresponsedetail" nillable="true" type="tns:Globalpartnerweeklydemandresponsedetail" />
+</xs:schema>

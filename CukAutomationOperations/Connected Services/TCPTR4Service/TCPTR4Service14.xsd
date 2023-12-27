@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.BeneficiaryHold" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:complexType name="ArrayOfBeneficiaryholdrequestlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Beneficiaryholdrequestlist" nillable="true" type="tns:Beneficiaryholdrequestlist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiaryholdrequestlist" nillable="true" type="tns:ArrayOfBeneficiaryholdrequestlist" />
+  <xs:complexType name="Beneficiaryholdrequestlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeneficiaryState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_LocalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Channel_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstimatedNoMoneyYieldRate" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldYieldRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSpecialHandling" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrimaryHoldOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryHoldOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WaitingSinceDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Beneficiaryholdrequestlist" nillable="true" type="tns:Beneficiaryholdrequestlist" />
+  <xs:complexType name="BeneficiaryHoldResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeneficiaryHoldResponseList" nillable="true" type="tns:ArrayOfBeneficiaryholdresponselist" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q1:Error" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BeneficiaryHoldResponse" nillable="true" type="tns:BeneficiaryHoldResponse" />
+  <xs:complexType name="ArrayOfBeneficiaryholdresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Beneficiaryholdresponselist" nillable="true" type="tns:Beneficiaryholdresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiaryholdresponselist" nillable="true" type="tns:ArrayOfBeneficiaryholdresponselist" />
+  <xs:complexType name="Beneficiaryholdresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_LocallID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildRNID" type="xs:long" />
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Beneficiaryholdresponselist" nillable="true" type="tns:Beneficiaryholdresponselist" />
+</xs:schema>

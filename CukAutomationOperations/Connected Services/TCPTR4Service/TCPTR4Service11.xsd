@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Error">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorLoggedInUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorModule" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorRetryable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorSubModule" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorTimestamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RelatedRecordId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Error" nillable="true" type="tns:Error" />
+  <xs:complexType name="SpecificBeneficiarySearchModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Needkey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="globalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isCorrespondence" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isDepsub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isSpecificChildPool" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isSub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomoney" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sponsorshipAct" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecificBeneficiarySearchModel" nillable="true" type="tns:SpecificBeneficiarySearchModel" />
+  <xs:complexType name="ArrayOfChildDataModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChildDataModel" nillable="true" type="tns:ChildDataModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChildDataModel" nillable="true" type="tns:ArrayOfChildDataModel" />
+  <xs:complexType name="ChildDataModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbbreviatedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBDDAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBDDNextDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBDDStartDateText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBPaymentMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_LocalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BirthDateKnown" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BlackbaudID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Campaign" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Channel_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Child" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildBirthDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComBlackbaudID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommSupporter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommitmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompassChildID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompassConID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContinentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Course" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstimatedNoMoneyYieldRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Event" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullBodyImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Handicapped" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HoldDateExpiry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldEndDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldExpirationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldSourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldYieldRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hold_Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IsSpecialHandling" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguagesSpoken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastCaseStudyDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LinkedToPartnership" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingChannel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NeedId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NeedKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NeedRNID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NeedStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgSupporterGroupLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Organisation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orphan" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PaymentMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreferredName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryHoldOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectRNID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RGDetails" nillable="true" type="tns:ArrayOfRecurringGifts" />
+      <xs:element minOccurs="0" name="RNNeedId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationshipManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchoolPerformance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryHoldOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SponsorshipPlus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterGroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="actionid" type="xs:int" />
+      <xs:element minOccurs="0" name="childGlobalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="childKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="childName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="childPersonalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="globalCommitmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="globalCorrCommitmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supGrpGlobalId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChildDataModel" nillable="true" type="tns:ChildDataModel" />
+  <xs:complexType name="ArrayOfRecurringGifts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecurringGifts" nillable="true" type="tns:RecurringGifts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecurringGifts" nillable="true" type="tns:ArrayOfRecurringGifts" />
+  <xs:complexType name="RecurringGifts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RGAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="RGType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecurringGifts" nillable="true" type="tns:RecurringGifts" />
+  <xs:complexType name="ArrayOfSupporterDataModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupporterDataModel" nillable="true" type="tns:SupporterDataModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupporterDataModel" nillable="true" type="tns:ArrayOfSupporterDataModel" />
+  <xs:complexType name="SupporterDataModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnnualBirthdayGift" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnnualChristmasGift" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Blackbaud" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlackbaudId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildNeedKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildPreferredName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Connect" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GiftAidDeclaration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsNewSupporter" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NewSupporterPreferredName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoOfEnq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldSupporterPreferredName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Process" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupGrpInRN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterGroupId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterInRN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supporterpreferencesphone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCommitment" type="xs:int" />
+      <xs:element minOccurs="0" name="TraditionalorPaperless" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Welcomepackoption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firtsname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hassponplus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mobileNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="needId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="street1" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupporterDataModel" nillable="true" type="tns:SupporterDataModel" />
+  <xs:complexType name="BarclaysStandingOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accountno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sortcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StandingOrderDecription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="accountno_sortcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="actionid" type="xs:int" />
+      <xs:element minOccurs="0" name="afterdays" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="beforedays" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="constituentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isContainImpactGiving" type="xs:boolean" />
+      <xs:element minOccurs="0" name="recordid" type="xs:long" />
+      <xs:element minOccurs="0" name="referenceno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BarclaysStandingOrderModel" nillable="true" type="tns:BarclaysStandingOrderModel" />
+  <xs:complexType name="NotificationsModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RecordID" type="xs:long" />
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:NotificationData" />
+      <xs:element minOccurs="0" name="mutable_content" type="xs:boolean" />
+      <xs:element minOccurs="0" name="notification" nillable="true" type="tns:NotificationContent" />
+      <xs:element minOccurs="0" name="to" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificationsModel" nillable="true" type="tns:NotificationsModel" />
+  <xs:complexType name="NotificationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorrespondenceID" type="xs:long" />
+      <xs:element minOccurs="0" name="FileID" type="xs:long" />
+      <xs:element minOccurs="0" name="badge" type="xs:long" />
+      <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="heroId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="needkey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="revenueid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificationData" nillable="true" type="tns:NotificationData" />
+  <xs:complexType name="NotificationContent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="badge" type="xs:long" />
+      <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sound" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificationContent" nillable="true" type="tns:NotificationContent" />
+  <xs:complexType name="ConstituentRevenueAndGiftAidTotalAmount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GiftAidTotalAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RevenueTotalAmount" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConstituentRevenueAndGiftAidTotalAmount" nillable="true" type="tns:ConstituentRevenueAndGiftAidTotalAmount" />
+  <xs:complexType name="ICPDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Facilities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Interventionavailable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfActiveMembers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartneredwithCompassion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WeeklyChildAttendance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICPDetailModel" nillable="true" type="tns:ICPDetailModel" />
+  <xs:complexType name="createIncidentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildNameLite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedByAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginatingEvent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="actionid" type="xs:int" />
+      <xs:element minOccurs="0" name="applicationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="image1base64" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="image1path" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="image2base64" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="image2path" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="incidentId" type="xs:long" />
+      <xs:element minOccurs="0" name="office" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supporterId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="createIncidentModel" nillable="true" type="tns:createIncidentModel" />
+  <xs:complexType name="ArrayOfDonationModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DonationModel" nillable="true" type="tns:DonationModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDonationModel" nillable="true" type="tns:ArrayOfDonationModel" />
+  <xs:complexType name="DonationModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DonationType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DonationModel" nillable="true" type="tns:DonationModel" />
+  <xs:complexType name="ArrayOfSupporterCommitmentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupporterCommitmentModel" nillable="true" type="tns:SupporterCommitmentModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupporterCommitmentModel" nillable="true" type="tns:ArrayOfSupporterCommitmentModel" />
+  <xs:complexType name="SupporterCommitmentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="BBDDAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBDDNextDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBDDStartDateText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBPaymentMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_LocalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlackBaudId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlackbaudID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Campaign" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildExitDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommSupporter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommitmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompassConID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DelinkType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Event" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExistingBeneficiaryGlobalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hold_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LinkedToPartnership" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingChannel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Need" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Organisation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimarySupporterblackbaudid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecurringGiftType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationshipManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RevenueId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SponsorshipPlus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupGrpType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterGroupBlackbaudid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterGroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupporterPostcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="childGlobalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="childId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="childName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="commitmentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="globalCommitmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="globalCorrCommitmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="groupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supGrpGlobalId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupporterCommitmentModel" nillable="true" type="tns:SupporterCommitmentModel" />
+  <xs:complexType name="ArrayOfcancelRecurringGift">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cancelRecurringGift" nillable="true" type="tns:cancelRecurringGift" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcancelRecurringGift" nillable="true" type="tns:ArrayOfcancelRecurringGift" />
+  <xs:complexType name="cancelRecurringGift">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PrimarySupporterblackbaudid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Responce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="childlocalid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="commBBID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="conid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="revenueid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sponsorshipType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cancelRecurringGift" nillable="true" type="tns:cancelRecurringGift" />
+  <xs:complexType name="ArrayOfRGDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RGDetails" nillable="true" type="tns:RGDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRGDetails" nillable="true" type="tns:ArrayOfRGDetails" />
+  <xs:complexType name="RGDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RGAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RGType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RGDetails" nillable="true" type="tns:RGDetails" />
+  <xs:complexType name="ArrayOfRecurringGiftModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecurringGiftModel" nillable="true" type="tns:RecurringGiftModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecurringGiftModel" nillable="true" type="tns:ArrayOfRecurringGiftModel" />
+  <xs:complexType name="RecurringGiftModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChildID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChristmasRGNextInstallmentDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConstituentRecordID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDAccountNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDISource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDISourceDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDSortCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DirectDebitReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsHillsongSponsorshipPlus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSponsorshipPlus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NeedKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextInstallmentDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RGAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecurringGiftType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RevenueID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StandingOrderReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmountOfAllSponsorshipRG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lookupid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="preferred_child_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecurringGiftModel" nillable="true" type="tns:RecurringGiftModel" />
+  <xs:complexType name="AmbassadorsModal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="interest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phonenumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AmbassadorsModal" nillable="true" type="tns:AmbassadorsModal" />
+  <xs:complexType name="InitialRGData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Designation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lookupid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Needkey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="actionid" type="xs:int" />
+      <xs:element minOccurs="0" name="boosterFlag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InitialRGData" nillable="true" type="tns:InitialRGData" />
+  <xs:complexType name="CompassionTogether">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yourname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompassionTogether" nillable="true" type="tns:CompassionTogether" />
+</xs:schema>

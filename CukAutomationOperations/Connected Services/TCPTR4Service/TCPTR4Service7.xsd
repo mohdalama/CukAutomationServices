@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.ICPSearch" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:complexType name="ICPReservationSearchFromRNModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_LocalID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Country" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICPId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICPName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowAllReservations" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="takelimit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICPReservationSearchFromRNModel" nillable="true" type="tns:ICPReservationSearchFromRNModel" />
+  <xs:complexType name="ArrayOfICPReservationSearchFromRNResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICPReservationSearchFromRNResponse" nillable="true" type="tns:ICPReservationSearchFromRNResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICPReservationSearchFromRNResponse" nillable="true" type="tns:ArrayOfICPReservationSearchFromRNResponse" />
+  <xs:complexType name="ICPReservationSearchFromRNResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AirportTravelTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_GlobalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary_LocalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CampaignEventIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Channel_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClosestMajorCityEnglish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cluster_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldOffice_Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldOffice_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldYieldRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternationalDenominationAffiliation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsReservationAutoApproved" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Territory_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnsponsoredScore" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICPReservationSearchFromRNResponse" nillable="true" type="tns:ICPReservationSearchFromRNResponse" />
+  <xs:complexType name="IcpSearchRequestModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClosestMajorCity" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Country" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="HighRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICPCluster" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICPId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICPName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongWaiting" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LowRate" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Territory" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="fieldOffice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="intDenoAffiliation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IcpSearchRequestModel" nillable="true" type="tns:IcpSearchRequestModel" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q4:Error" />
+      <xs:element minOccurs="0" name="ICPSearchResponseList" nillable="true" type="tns:ArrayOfIcpsearchresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="ArrayOfIcpsearchresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Icpsearchresponselist" nillable="true" type="tns:Icpsearchresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIcpsearchresponselist" nillable="true" type="tns:ArrayOfIcpsearchresponselist" />
+  <xs:complexType name="Icpsearchresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirportTravelTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClosestMajorCityEnglish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cluster_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldOffice_Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldOffice_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternationalDenominationAffiliation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Territory_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnsponsoredScore" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Icpsearchresponselist" nillable="true" type="tns:Icpsearchresponselist" />
+</xs:schema>

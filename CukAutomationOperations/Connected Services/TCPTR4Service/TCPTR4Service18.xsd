@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model.Intervention" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TcptR4Services/TCPTR4Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" />
+  <xs:complexType name="Interventionholdlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequestedAdditionalFundComm" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NextYearOptIn" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrimaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceLevelAgreement" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Interventionholdlist" nillable="true" type="tns:Interventionholdlist" />
+  <xs:complexType name="InterventionHoldResponseList">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q1:Error" />
+      <xs:element minOccurs="0" name="InterventionHoldResponse" nillable="true" type="tns:ArrayOfInterventionholdresponse" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterventionHoldResponseList" nillable="true" type="tns:InterventionHoldResponseList" />
+  <xs:complexType name="ArrayOfInterventionholdresponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Interventionholdresponse" nillable="true" type="tns:Interventionholdresponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterventionholdresponse" nillable="true" type="tns:ArrayOfInterventionholdresponse" />
+  <xs:complexType name="Interventionholdresponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Interventionholdresponse" nillable="true" type="tns:Interventionholdresponse" />
+  <xs:complexType name="InterverntionQueryResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q2:Error" />
+      <xs:element minOccurs="0" name="InterventionQueryResponseList" nillable="true" type="tns:ArrayOfInterventionqueryresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterverntionQueryResponse" nillable="true" type="tns:InterverntionQueryResponse" />
+  <xs:complexType name="ArrayOfInterventionqueryresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Interventionqueryresponselist" nillable="true" type="tns:Interventionqueryresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterventionqueryresponselist" nillable="true" type="tns:ArrayOfInterventionqueryresponselist" />
+  <xs:complexType name="Interventionqueryresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalMarketingInformation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdditionalRequestedFunding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldOffice_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundingStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICP_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterventionCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterventionSubCategory_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterventionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFieldOfficePriority" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ParentInterventionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlannedSponsorshipBeneficiariesNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposedStartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemainingAmountToRaise" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartNoLaterThanDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalEstimatedCosts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalInterventionAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPDCCost" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Interventionqueryresponselist" nillable="true" type="tns:Interventionqueryresponselist" />
+  <xs:complexType name="Interventionholdcancellationlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Interventionholdcancellationlist" nillable="true" type="tns:Interventionholdcancellationlist" />
+  <xs:complexType name="InterventionHoldCancelResponse">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q3:Error" />
+      <xs:element minOccurs="0" name="InterventionHoldCancellationResponseList" nillable="true" type="tns:ArrayOfInterventionholdcancellationresponselist" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterventionHoldCancelResponse" nillable="true" type="tns:InterventionHoldCancelResponse" />
+  <xs:complexType name="ArrayOfInterventionholdcancellationresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Interventionholdcancellationresponselist" nillable="true" type="tns:Interventionholdcancellationresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterventionholdcancellationresponselist" nillable="true" type="tns:ArrayOfInterventionholdcancellationresponselist" />
+  <xs:complexType name="Interventionholdcancellationresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Interventionholdcancellationresponselist" nillable="true" type="tns:Interventionholdcancellationresponselist" />
+  <xs:complexType name="Interventioncommitmentlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Commitment_Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequestedAdditionalFundCommitted" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Interventioncommitmentlist" nillable="true" type="tns:Interventioncommitmentlist" />
+  <xs:complexType name="InterventionCommitmentResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TcptR4DataOperations.Model" minOccurs="0" name="Error" nillable="true" type="q4:Error" />
+      <xs:element minOccurs="0" name="InterventionCommitmentResponseList" nillable="true" type="tns:ArrayOfInterventioncommitmentresponselist" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterventionCommitmentResponse" nillable="true" type="tns:InterventionCommitmentResponse" />
+  <xs:complexType name="ArrayOfInterventioncommitmentresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Interventioncommitmentresponselist" nillable="true" type="tns:Interventioncommitmentresponselist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterventioncommitmentresponselist" nillable="true" type="tns:ArrayOfInterventioncommitmentresponselist" />
+  <xs:complexType name="Interventioncommitmentresponselist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="GlobalPartner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intervention_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Interventioncommitmentresponselist" nillable="true" type="tns:Interventioncommitmentresponselist" />
+  <xs:complexType name="InterventionHoldList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="InitiationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterventionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterventionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextYearOptIn" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrimaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemainingAmountToRaise" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceLevelAgreement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalEstimatedCosts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalInterventionAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPDCCost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="intName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="intid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="records" type="xs:int" />
+      <xs:element minOccurs="0" name="start" type="xs:int" />
+      <xs:element minOccurs="0" name="totalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterventionHoldList" nillable="true" type="tns:InterventionHoldList" />
+  <xs:complexType name="ArrayOfInterventionHoldList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InterventionHoldList" nillable="true" type="tns:InterventionHoldList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterventionHoldList" nillable="true" type="tns:ArrayOfInterventionHoldList" />
+</xs:schema>
